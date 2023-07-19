@@ -5,7 +5,7 @@ import {SideBar, Videos} from './'
 import { fetchFromAPI } from '../utils/fetchFromAPI'
 
 const Feed = () => {
-  const [selectedCategory,setSelectedCategory] = useState('New')
+  const [selectedCategory,setSelectedCategory] = useState('Latest')
   const [videos, setVideos] = useState([])
 
   useEffect(() => {
@@ -19,7 +19,8 @@ const Feed = () => {
         sx={{ 
               height: { sx: 'auto', md: '92vh' }, 
               borderRight:'1px solid #3d3d3d',
-              px: {sx: 0,md: 2}}}>
+              px: {xs: 0,md: 2}}}
+      >
         <SideBar 
           selectedCategory={selectedCategory} 
           setSelectedCategory={setSelectedCategory}

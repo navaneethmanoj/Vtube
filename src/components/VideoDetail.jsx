@@ -18,7 +18,6 @@ const VideoDetail = () => {
 
     fetchFromAPI(`search?relatedToVideoId=${id}`)
       .then((data) => {
-        console.log("Data:", data)
         setRelatedVideos(data.items)
       })
       .catch((err) => console.log(err))
