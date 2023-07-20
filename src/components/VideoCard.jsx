@@ -7,9 +7,11 @@ import { demoThumbnailUrl, demoVideoUrl, demoVideoTitle, demoChannelTitle, demoC
 const VideoCard = ({ video: { id: { videoId }, snippet } }) => {
   return (
     <Card 
-      sx={{width:{xs: '100%', sm: '358px', md:'320px'}, 
-      boxShadow:"none", 
-      borderRadius:0}}
+      sx={{
+        width:{xs: '330px', sm: '358px', md:'320px'}, 
+        boxShadow:"none", 
+        borderRadius:0,
+      }}
     >
       <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
         <CardMedia
